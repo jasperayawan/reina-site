@@ -1,0 +1,12 @@
+html, body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+h1{
+    font-size: 1rem;
+    width: 50%;
+    color: #333;
+}
