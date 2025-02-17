@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
-    <h1>"Even the darkest night will end, and the sun will rise again. Your pain is temporary, but your strength is forever." 🌙💙</h1>
-    <img src="/reina.jpg" alt="" width="200">
-    <audio controls>
-        <source src="/broken-sonata-sad-piano-201839.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <div class="loader"></div>
+    <div id="main-content" class="hidden">
+        <h1>"Even the darkest night will end, and the sun will rise again. Your pain is temporary, but your strength is forever." 🌙💙</h1>
+        <img src="reina.jpg" alt="" width="200">
+        <audio controls>
+            <source src="broken-sonata-sad-piano-201839.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader').style.display = 'none';
+                document.getElementById('main-content').classList.remove('hidden');
+            }, 3000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
 </body>
 </html>
